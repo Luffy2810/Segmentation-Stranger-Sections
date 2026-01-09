@@ -1,0 +1,152 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "unimatch-idx-12",
+            "type": "debugpy",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "1",
+            },
+            "request": "launch",
+            "program": "unimatch.py",
+            "args": [
+                "--project_name=ss2-ssl-idx-12",
+                "--model_name=unimatch-1",
+                // "--enable_logging",
+
+                "--dataset=idx_12",
+                "--nclass=3",
+
+                "--num_epochs=100",
+                "--epochs_before_eval=1",
+                "--save_path=exp/idx_12",
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "unimatch-idx-3",
+            "type": "debugpy",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            },
+            "request": "launch",
+            "program": "unimatch.py",
+            "args": [
+                "--project_name=ss2-ssl-idx-3",
+                "--model_name=unimatch-1",
+                // "--enable_logging",
+
+                "--dataset=idx_3",
+                "--nclass=1",
+
+                "--num_epochs=100",
+                "--epochs_before_eval=5",
+                "--save_path=exp/idx_3",
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "fixmatch-idx-12",
+            "type": "debugpy",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            },
+            "request": "launch",
+            "program": "fixmatch.py",
+            "args": [
+                "--project_name=ss2-ssl-idx-12",
+                "--model_name=fixmatch-loss-types",
+                // "--enable_logging",
+
+                "--dataset=idx_12",
+                "--nclass=3",
+
+                "--num_epochs=100",
+                "--epochs_before_eval=1",
+                "--save_path=exp/idx_12",
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "fixmatch-idx-3",
+            "type": "debugpy",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            },
+            "request": "launch",
+            "program": "fixmatch.py",
+            "args": [
+                "--project_name=ss2-ssl-idx-3",
+                "--model_name=fixmatch-100",
+                // "--enable_logging",
+
+                "--dataset=idx_3",
+                "--nclass=1",
+
+                "--num_epochs=100",
+                "--epochs_before_eval=1",
+                "--save_path=exp/idx_3",
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "supervised-idx-12",
+            "type": "debugpy",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "CUDA_LAUNCH_BLOCKING": "1",
+            },
+            "request": "launch",
+            "program": "supervised.py",
+            "args": [
+                "--project_name=ss2-idx-12",
+                "--model_name=debug-sl-0",
+                // "--enable_logging",
+
+                "--dataset=idx_12",
+                "--nclass=3",
+
+                "--num_epochs=5",
+                "--epochs_before_eval=1",
+                "--save_path=exp/idx_12",
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "supervised-idx-3",
+            "type": "debugpy",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "CUDA_LAUNCH_BLOCKING": "1",
+            },
+            "request": "launch",
+            "program": "supervised.py",
+            "args": [
+                "--project_name=ss2-idx-3",
+                "--model_name=sl-no-aug-0",
+                // "--enable_logging",
+
+                "--dataroot=/home/tvg/Segmentation-UniMatch/dataset/kerogens",
+                "--dataset=idx_3",
+                "--nclass=1",
+
+                "--num_epochs=5",
+                "--epochs_before_eval=1",
+                "--save_path=exp/idx_3",
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+    ]
+}
